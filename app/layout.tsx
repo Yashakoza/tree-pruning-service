@@ -14,11 +14,34 @@ const assistant = Assistant({
   weight: ['400', '500', '600', '700'],
 })
 
+const SITE_TITLE = 'עץ תמיר | גיזום עצים מקצועי ובטוח באזור המרכז'
+const SITE_DESCRIPTION =
+  'עץ תמיר מספק שירותי גיזום עצים מקצועיים, בטוחים ונקיים לבתים פרטיים, בניינים ועסקים. גיזום עצים, דילול, עיצוב, ענפים מסוכנים ופינוי גזם. לקבלת הצעת מחיר מהירה.'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? `https://${process.env.NEXT_PUBLIC_SITE_URL.replace(/^https?:\/\//, '')}`
+  : process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : 'http://localhost:3000'
+
 export const metadata: Metadata = {
-  title: 'עץ תמיר | גיזום עצים מקצועי ובטוח באזור המרכז',
-  description:
-    'עץ תמיר מספק שירותי גיזום עצים מקצועיים, בטוחים ונקיים לבתים פרטיים, בניינים ועסקים. גיזום עצים, דילול, עיצוב, ענפים מסוכנים ופינוי גזם. לקבלת הצעת מחיר מהירה.',
+  metadataBase: new URL(siteUrl),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
   generator: 'v0.app',
+  openGraph: {
+    type: 'website',
+    locale: 'he_IL',
+    url: '/',
+    siteName: 'עץ תמיר',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
   icons: {
     icon: [
       {
