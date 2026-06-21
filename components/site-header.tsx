@@ -39,12 +39,13 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-2">
-          <Button asChild size="sm" className="hidden rounded-full sm:inline-flex">
-            <a href={`tel:${PHONE_TEL}`}>
-              <Phone className="size-4" />
-              {PHONE_DISPLAY}
-            </a>
-          </Button>
+          <LinkButton
+            href={`tel:${PHONE_TEL}`}
+            className="hidden h-9 rounded-full px-4 text-sm sm:inline-flex"
+          >
+            <Phone className="size-4" />
+            {PHONE_DISPLAY}
+          </LinkButton>
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
