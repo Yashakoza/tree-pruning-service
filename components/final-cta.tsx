@@ -1,14 +1,14 @@
 import { Phone } from "lucide-react"
 import { LinkButton } from "@/components/link-button"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
-import { PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact-info"
+import { BUSINESS_CONFIG, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact-info"
 
 export function FinalCta() {
   return (
     <section className="bg-primary py-16 text-primary-foreground md:py-24">
       <div className="mx-auto flex max-w-4xl flex-col items-center gap-6 px-4 text-center md:px-6">
         <h2 className="text-balance font-heading text-3xl font-extrabold leading-tight md:text-4xl">
-          עץ תמיר — גיזום עצים מקצועי שמשאיר את החצר בטוחה, נקייה ויפה
+          {BUSINESS_CONFIG.businessName} — גיזום עצים מקצועי שמשאיר את החצר בטוחה, נקייה ויפה
         </h2>
         <p className="max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/80">
           צריכים לגזום עץ, להסיר ענפים מסוכנים או לסדר את החצר? השאירו פרטים ונחזור
