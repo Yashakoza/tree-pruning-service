@@ -1,8 +1,9 @@
 import { ImageResponse } from "next/og"
 import { readFile } from "node:fs/promises"
 import { join } from "node:path"
+import { BUSINESS_CONFIG } from "@/lib/contact-info"
 
-export const alt = "עץ תמיר - גיזום עצים מקצועי ובטוח"
+export const alt = `${BUSINESS_CONFIG.businessName} - גיזום עצים מקצועי ובטוח`
 export const size = { width: 1200, height: 630 }
 export const contentType = "image/png"
 
@@ -18,7 +19,7 @@ async function loadHebrewFont(text: string, weight: number) {
 }
 
 export default async function OpengraphImage() {
-  const title = "עץ תמיר"
+  const title = BUSINESS_CONFIG.businessName
   const tagline = "גיזום עצים מקצועי, בטוח ונקי"
   const sub = "בתים פרטיים · בניינים · עסקים — לקבלת הצעת מחיר מהירה"
   const allText = `${title}${tagline}${sub}`
