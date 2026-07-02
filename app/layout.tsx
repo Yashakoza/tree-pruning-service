@@ -29,6 +29,10 @@ export const metadata: Metadata = {
   title: SITE_TITLE,
   description: SITE_DESCRIPTION,
   generator: 'v0.app',
+  robots: {
+    index: false,
+    follow: false,
+  },
   openGraph: {
     type: 'website',
     locale: 'he_IL',

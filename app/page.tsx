@@ -1,5 +1,6 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
+import { DemoBanner } from "@/components/demo-banner"
 import { Problem } from "@/components/problem"
 import { Services } from "@/components/services"
 import { WhyUs } from "@/components/why-us"
@@ -19,6 +20,7 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
+        <DemoBanner />
         <Problem />
         <Services />
         <WhyUs />
