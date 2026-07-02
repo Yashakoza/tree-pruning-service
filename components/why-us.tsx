@@ -1,6 +1,7 @@
 import Image from "next/image"
 import { Check } from "lucide-react"
 import { LinkButton } from "@/components/link-button"
+import { BUSINESS_CONFIG } from "@/lib/contact-info"
 
 const REASONS = [
   "עבודה בטוחה ומדויקת",
@@ -19,7 +20,7 @@ export function WhyUs() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
         <div>
           <h2 className="text-balance font-heading text-3xl font-extrabold md:text-4xl">
-            למה לבחור בעץ תמיר?
+            למה לבחור ב{BUSINESS_CONFIG.businessName}?
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/80">
             כי גיזום עצים זה לא רק להוריד ענפים — אלא לדעת בדיוק מה, איך ומתי. אצלנו
@@ -49,7 +50,7 @@ export function WhyUs() {
         <div className="relative aspect-[4/5] overflow-hidden rounded-3xl ring-1 ring-background/15 lg:aspect-[4/4.5]">
           <Image
             src="/images/hero-arborist.png"
-            alt="עובד מקצועי של עץ תמיר בעבודת גיזום"
+            alt={`עובד מקצועי של ${BUSINESS_CONFIG.businessName} בעבודת גיזום`}
             fill
             className="object-cover"
           />
