@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Phone, AlertTriangle } from "lucide-react"
 import { LinkButton } from "@/components/link-button"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
-import { PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact-info"
+import { BUSINESS_CONFIG, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact-info"
 
 export function Emergency() {
   return (
@@ -24,7 +24,7 @@ export function Emergency() {
         </h2>
         <p className="max-w-2xl text-pretty text-lg leading-relaxed text-background/80">
           במקרים של ענפים כבדים, עץ נטוי, נזקי סערה או ענפים מעל גגות, רכבים, שבילים
-          או קווי חשמל — חשוב לפנות במהירות להערכה מקצועית. עץ תמיר זמין עבורכם.
+          או קווי חשמל — חשוב לפנות במהירות להערכה מקצועית. {BUSINESS_CONFIG.businessName} זמין עבורכם.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <LinkButton
