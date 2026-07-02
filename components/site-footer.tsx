@@ -1,14 +1,6 @@
 import { TreeDeciduous, Phone, MapPin } from "lucide-react"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
-import { PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK, SERVICE_AREA } from "@/lib/contact-info"
-
-const SERVICES = [
-  "גיזום עצים מקצועי",
-  "כריתת ענפים מסוכנים",
-  "עיצוב ודילול עצים",
-  "גיזום עצים בגובה",
-  "פינוי גזם",
-]
+import { BUSINESS_CONFIG, PHONE_DISPLAY, PHONE_TEL, WHATSAPP_LINK, SERVICE_AREA } from "@/lib/contact-info"
 
 export function SiteFooter() {
   return (
@@ -19,7 +11,9 @@ export function SiteFooter() {
             <span className="flex size-10 items-center justify-center rounded-xl bg-primary text-primary-foreground">
               <TreeDeciduous className="size-6" />
             </span>
-            <span className="font-heading text-xl font-extrabold text-foreground">עץ תמיר</span>
+            <span className="font-heading text-xl font-extrabold text-foreground">
+              {BUSINESS_CONFIG.businessShortName}
+            </span>
           </div>
           <p className="mt-4 max-w-xs leading-relaxed text-muted-foreground">
             שירותי גיזום עצים מקצועיים, בטוחים ונקיים לבתים פרטיים, בניינים ועסקים
@@ -30,8 +24,8 @@ export function SiteFooter() {
         <div>
           <h3 className="font-heading font-bold text-foreground">השירותים שלנו</h3>
           <ul className="mt-4 grid gap-2 text-muted-foreground">
-            {SERVICES.map((service) => (
-              <li key={service}>{service}</li>
+            {BUSINESS_CONFIG.services.slice(0, 5).map((service) => (
+              <li key={service.title}>{service.title}</li>
             ))}
           </ul>
         </div>
@@ -69,7 +63,7 @@ export function SiteFooter() {
 
       <div className="mx-auto mt-10 max-w-6xl border-t border-border px-4 pt-6 md:px-6">
         <p className="text-center text-sm text-muted-foreground">
-          © {new Date().getFullYear()} עץ תמיר — גיזום עצים מקצועי. כל הזכויות שמורות.
+          © {new Date().getFullYear()} {BUSINESS_CONFIG.businessName} — גיזום עצים מקצועי. כל הזכויות שמורות.
         </p>
       </div>
     </footer>
