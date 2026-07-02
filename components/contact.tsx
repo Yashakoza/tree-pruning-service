@@ -5,17 +5,7 @@ import { Phone, Upload, CheckCircle2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { LinkButton } from "@/components/link-button"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
-import { PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact-info"
-
-const SERVICE_OPTIONS = [
-  "גיזום עצים",
-  "עיצוב ודילול עצים",
-  "כריתת ענפים מסוכנים",
-  "גיזום בגובה",
-  "גיזום לפני חורף",
-  "פינוי גזם",
-  "תחזוקת עצים שוטפת",
-]
+import { BUSINESS_CONFIG, PHONE_TEL, WHATSAPP_LINK } from "@/lib/contact-info"
 
 const CALLBACK_TIMES = ["בבוקר", "בצהריים", "אחר הצהריים", "בערב", "בכל שעה"]
 
@@ -100,7 +90,12 @@ export function Contact() {
                       <label htmlFor="city" className="mb-1.5 block text-sm font-medium text-foreground">
                         עיר / אזור
                       </label>
-                      <input id="city" name="city" placeholder="רמת גן" className={fieldClass} />
+                      <input
+                        id="city"
+                        name="city"
+                        placeholder={BUSINESS_CONFIG.serviceAreaCities[1] ?? BUSINESS_CONFIG.serviceArea}
+                        className={fieldClass}
+                      />
                     </div>
                     <div>
                       <label htmlFor="service" className="mb-1.5 block text-sm font-medium text-foreground">
@@ -110,9 +105,9 @@ export function Contact() {
                         <option value="" disabled>
                           בחרו שירות
                         </option>
-                        {SERVICE_OPTIONS.map((opt) => (
-                          <option key={opt} value={opt}>
-                            {opt}
+                        {BUSINESS_CONFIG.services.map((service) => (
+                          <option key={service.title} value={service.title}>
+                            {service.title}
                           </option>
                         ))}
                       </select>

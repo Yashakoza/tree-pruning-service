@@ -2,7 +2,7 @@ import Image from "next/image"
 import { Phone, ShieldCheck, Clock, Trash2, Building2, Award } from "lucide-react"
 import { LinkButton } from "@/components/link-button"
 import { WhatsAppIcon } from "@/components/whatsapp-icon"
-import { PHONE_TEL, WHATSAPP_LINK, SERVICE_AREA } from "@/lib/contact-info"
+import { BUSINESS_CONFIG, PHONE_TEL, WHATSAPP_LINK, SERVICE_AREA } from "@/lib/contact-info"
 
 const TRUST_BADGES = [
   { icon: ShieldCheck, label: "עבודה מקצועית ובטוחה" },
@@ -33,13 +33,11 @@ export function Hero() {
           </span>
 
           <h1 className="mt-5 text-balance font-heading text-4xl font-extrabold leading-tight text-background md:text-5xl lg:text-6xl">
-            גיזום עצים מקצועי, בטוח ונקי — עד הבית
+            {BUSINESS_CONFIG.heroHeadline}
           </h1>
 
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-background/85">
-            עץ תמיר מספק שירותי גיזום, עיצוב ודילול עצים, הסרת ענפים מסוכנים, גיזום
-            בגובה ותחזוקת עצים — לבתים פרטיים, בנייני מגורים ועסקים. עבודה מסודרת,
-            בטוחה ועם פינוי גזם בסיום.
+            {BUSINESS_CONFIG.heroSubheadline}
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">

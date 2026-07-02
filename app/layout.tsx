@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import { Heebo, Assistant } from 'next/font/google'
+import { BUSINESS_CONFIG } from '@/lib/contact-info'
 import './globals.css'
 
 const heebo = Heebo({
@@ -14,9 +15,9 @@ const assistant = Assistant({
   weight: ['400', '500', '600', '700'],
 })
 
-const SITE_TITLE = 'עץ תמיר | גיזום עצים מקצועי ובטוח באזור המרכז'
+const SITE_TITLE = `${BUSINESS_CONFIG.businessName} | גיזום עצים מקצועי ובטוח באזור המרכז`
 const SITE_DESCRIPTION =
-  'עץ תמיר מספק שירותי גיזום עצים מקצועיים, בטוחים ונקיים לבתים פרטיים, בניינים ועסקים. גיזום עצים, דילול, עיצוב, ענפים מסוכנים ופינוי גזם. לקבלת הצעת מחיר מהירה.'
+  `${BUSINESS_CONFIG.businessName} מספק שירותי גיזום עצים מקצועיים, בטוחים ונקיים לבתים פרטיים, בניינים ועסקים. גיזום עצים, דילול, עיצוב, ענפים מסוכנים ופינוי גזם. לקבלת הצעת מחיר מהירה.`
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
   ? `https://${process.env.NEXT_PUBLIC_SITE_URL.replace(/^https?:\/\//, '')}`
@@ -30,14 +31,14 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   generator: 'v0.app',
   robots: {
-    index: false,
-    follow: false,
+    index: !BUSINESS_CONFIG.noindex,
+    follow: !BUSINESS_CONFIG.nofollow,
   },
   openGraph: {
     type: 'website',
     locale: 'he_IL',
     url: '/',
-    siteName: 'עץ תמיר',
+    siteName: BUSINESS_CONFIG.businessName,
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
   },

@@ -1,4 +1,5 @@
 import { AlertTriangle, Sun, Home, Users } from "lucide-react"
+import { BUSINESS_CONFIG } from "@/lib/contact-info"
 
 const RISKS = [
   { icon: AlertTriangle, title: "סיכון בטיחותי", text: "ענפים יבשים, כבדים או נטויים עלולים ליפול ולסכן אנשים ורכוש." },
@@ -16,7 +17,7 @@ export function Problem() {
             עץ שלא מטופל בזמן עלול להפוך לבעיה
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            עצים מוזנחים, יבשים או פגועי סערה הם לא רק עניין אסתטי. עץ תמיר מבצע גיזום
+            עצים מוזנחים, יבשים או פגועי סערה הם לא רק עניין אסתטי. {BUSINESS_CONFIG.businessName} מבצע גיזום
             מבוקר ובטוח שמחזיר לחצר מראה מטופח — ומונע בעיות לפני שהן מתחילות.
           </p>
         </div>
