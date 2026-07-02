@@ -5,6 +5,7 @@ import { Problem } from "@/components/problem"
 import { Services } from "@/components/services"
 import { WhyUs } from "@/components/why-us"
 import { BeforeAfter } from "@/components/before-after"
+import { Reviews } from "@/components/reviews"
 import { Process } from "@/components/process"
 import { Emergency } from "@/components/emergency"
 import { ServiceArea } from "@/components/service-area"
@@ -24,6 +25,7 @@ export default function Page() {
         <Services />
         <WhyUs />
         <BeforeAfter />
+        <Reviews />
         <Process />
         <Emergency />
         <ServiceArea />
