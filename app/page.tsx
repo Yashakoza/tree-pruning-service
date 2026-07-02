@@ -1,10 +1,10 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
+import { DemoBanner } from "@/components/demo-banner"
 import { Problem } from "@/components/problem"
 import { Services } from "@/components/services"
 import { WhyUs } from "@/components/why-us"
 import { BeforeAfter } from "@/components/before-after"
-import { Reviews } from "@/components/reviews"
 import { Process } from "@/components/process"
 import { Emergency } from "@/components/emergency"
 import { ServiceArea } from "@/components/service-area"
@@ -19,11 +19,11 @@ export default function Page() {
       <SiteHeader />
       <main>
         <Hero />
+        <DemoBanner />
         <Problem />
         <Services />
         <WhyUs />
         <BeforeAfter />
-        <Reviews />
         <Process />
         <Emergency />
         <ServiceArea />
