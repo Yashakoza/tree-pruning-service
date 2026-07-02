@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { label: "שירותים", href: "#services" },
   { label: "למה אנחנו", href: "#why" },
   { label: "תהליך", href: "#process" },
-  { label: "המלצות", href: "#reviews" },
   { label: "צרו קשר", href: "#contact" },
 ]
 
