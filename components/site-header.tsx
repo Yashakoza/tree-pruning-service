@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Phone, TreeDeciduous, Menu, X } from "lucide-react"
 import { LinkButton } from "@/components/link-button"
-import { BUSINESS_CONFIG, PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact-info"
+import { PHONE_DISPLAY, PHONE_TEL } from "@/lib/contact-info"
 
 const NAV_LINKS = [
   { label: "שירותים", href: "#services" },
@@ -23,7 +23,7 @@ export function SiteHeader() {
             <TreeDeciduous className="size-6" />
           </span>
           <span className="font-heading text-xl font-extrabold text-foreground">
-            {BUSINESS_CONFIG.businessShortName}
+            גינון לדוגמה
           </span>
         </a>
 
