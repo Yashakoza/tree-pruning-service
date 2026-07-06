@@ -55,7 +55,7 @@ export function SiteFooter() {
             </li>
             <li className="flex items-center gap-2 text-muted-foreground">
               <MapPin className="size-4" />
-              {SERVICE_AREA} והסביבה
+              {SERVICE_AREA}
             </li>
           </ul>
         </div>

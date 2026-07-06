@@ -19,7 +19,7 @@ export function ServiceArea() {
               אזורי שירות
             </span>
             <h2 className="mt-4 text-balance font-heading text-3xl font-extrabold text-foreground md:text-4xl">
-              שירותי גיזום עצים באזור {SERVICE_AREA} והסביבה
+              שירותי גיזום עצים באזור {SERVICE_AREA}
             </h2>
             <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
               {BUSINESS_CONFIG.businessName} נותן שירות לבתים פרטיים, בנייני מגורים, גינות, עסקים ושטחים
