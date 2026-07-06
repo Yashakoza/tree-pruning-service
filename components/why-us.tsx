@@ -20,7 +20,7 @@ export function WhyUs() {
       <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 md:px-6 lg:grid-cols-2">
         <div>
           <h2 className="text-balance font-heading text-3xl font-extrabold md:text-4xl">
-            למה לבחור ב{BUSINESS_CONFIG.businessName}?
+            למה לקוחות בוחרים בנו?
           </h2>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/80">
             כי גיזום עצים זה לא רק להוריד ענפים — אלא לדעת בדיוק מה, איך ומתי. אצלנו
